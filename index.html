@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>O futuro não está pronto</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#f7f4ec;--surface:#fff;--ink:#0f3024;--text:#2b3a33;--muted:#5d6f66;--accent:#2e7d4f;--gold:#e0a526;--line:#dfe6dc;--dark:#0f3024;--dark2:#16412f;--tile:#e6efe2;--hd:#f7f4ec;
+--serif:"Fraunces",Georgia,"Times New Roman",serif;--sans:"Inter",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1812;--surface:#12281e;--ink:#eaf3ec;--text:#ccd9d1;--muted:#93a89b;--accent:#5fc085;--line:#22443a;--tile:#1a3a2d;--hd:#0b1812}}
+:root[data-theme="dark"]{--bg:#0b1812;--surface:#12281e;--ink:#eaf3ec;--text:#ccd9d1;--muted:#93a89b;--accent:#5fc085;--line:#22443a;--tile:#1a3a2d;--hd:#0b1812}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hd);z-index:30}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--hd);border-bottom:1px solid var(--line);padding:12px 20px;display:flex;justify-content:space-between;align-items:center}
+.bar b{font:700 17px var(--serif);color:var(--ink)}
+.bar a{font:600 13px var(--sans);color:#0f3024;background:var(--gold);padding:8px 16px;border-radius:99px;text-decoration:none;cursor:pointer}
+.w{max-width:1040px;margin:0 auto;padding:0 22px}
+svg{display:block}
+.hero{background:var(--dark);color:#fff;position:relative;overflow:hidden}
+.hero .w{padding-top:56px;padding-bottom:0;position:relative;z-index:2}
+.eyebrow{font:700 12px var(--sans);letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+.hero h1{font:700 clamp(42px,9vw,84px)/1.02 var(--serif);margin:0 0 20px;letter-spacing:-1px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{font-size:19px;max-width:560px;color:#cfe0d5;margin:0 0 28px}
+.btn{display:inline-block;background:var(--gold);color:#0f3024;font:700 15px var(--sans);padding:14px 26px;border-radius:99px;text-decoration:none;cursor:pointer;border:0}
+.scene{width:100%;height:auto;margin-top:34px}
+.glow{position:absolute;right:-90px;top:-70px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(95,192,133,.28),transparent 68%)}
+section{padding:72px 0}
+.num{font:700 13px var(--sans);letter-spacing:2px;color:var(--accent);text-transform:uppercase;margin:0 0 10px}
+h2{font:700 clamp(30px,5vw,44px)/1.1 var(--serif);color:var(--ink);margin:0 0 18px;letter-spacing:-.5px}
+p{margin:0 0 16px}
+.two{display:grid;gap:34px;align-items:center}
+.planet{background:var(--dark);border-radius:28px;padding:20px}
+.cards{display:grid;gap:18px;margin-top:34px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.tile{height:130px;background:var(--tile);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;color:var(--accent)}
+.tile::before,.tile::after{content:"";position:absolute;border-radius:50%;background:var(--accent);opacity:.1}
+.tile::before{width:150px;height:150px;left:-40px;top:-60px}.tile::after{width:110px;height:110px;right:-20px;bottom:-50px}
+.tile svg{width:68px;height:68px;position:relative;z-index:1}
+.tile span{position:absolute;left:16px;top:12px;font:700 12px var(--sans);letter-spacing:1px;color:var(--muted)}
+.card div.t{padding:20px 22px 24px}
+.card h3{font:700 22px var(--serif);color:var(--ink);margin:0 0 6px}
+.card p{font-size:15.5px;line-height:1.55;color:var(--muted);margin:0}
+.band{background:var(--dark);color:#fff;padding:84px 0 0;position:relative;overflow:hidden}
+.band blockquote{margin:0 0 56px;font:600 clamp(28px,5vw,48px)/1.2 var(--serif);max-width:820px;position:relative;z-index:2}
+.band blockquote em{font-style:normal;color:var(--gold)}
+.band .pines{width:100%;height:auto;margin-top:-10px}
+.cols{display:grid;gap:18px;margin-top:30px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px}
+.panel h3{font:700 22px var(--serif);color:var(--ink);margin:0 0 14px;display:flex;align-items:center;gap:10px}
+.panel h3 svg{width:28px;height:28px;color:var(--accent)}
+.panel ul{list-style:none;margin:0;padding:0}
+.panel li{padding:10px 0 10px 30px;position:relative;border-top:1px solid var(--line);font-size:16px}
+.panel li:first-child{border:0}
+.panel li::before{content:"";position:absolute;left:0;top:17px;width:14px;height:14px;border-radius:50%;background:var(--accent)}
+.panel.warn li::before{background:var(--gold)}
+.panel.warn h3 svg{color:var(--gold)}
+.alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.steps{display:grid;gap:18px;margin-top:30px}
+.step{display:flex;gap:16px;align-items:flex-start}
+.step i{flex:none;width:46px;height:46px;border-radius:50%;background:var(--ink);color:var(--bg);font:700 18px var(--serif);display:flex;align-items:center;justify-content:center;font-style:normal}
+.step b{display:block;color:var(--ink);font-size:17px}
+.step span{font-size:15.5px;color:var(--muted);display:block;line-height:1.5}
+.quiz{background:var(--dark);color:#fff;border-radius:30px;padding:36px 26px;position:relative;overflow:hidden}
+.quiz .num{color:var(--gold)}
+.quiz h2{color:#fff}
+.quiz .q{font:600 20px var(--serif);color:#dcebe0;margin:0 0 22px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:rgba(255,255,255,.07);color:#fff;border:1.5px solid rgba(255,255,255,.18);border-radius:16px;padding:14px 16px;font:500 16px var(--sans);cursor:pointer;transition:.15s}
+.opt svg{width:28px;height:28px;color:var(--gold);flex:none}
+.opt.on{background:rgba(224,165,38,.16);border-color:var(--gold)}
+.other{display:none;margin-top:10px}
+.other input{width:100%;padding:14px;border-radius:14px;border:1.5px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;font:16px var(--sans)}
+.go{display:none;width:100%;margin-top:16px;background:var(--gold);color:#0f3024;border:0;border-radius:99px;padding:16px;font:700 16px var(--sans);cursor:pointer}
+#res{display:none}
+#res .ic{width:84px;height:84px;border-radius:50%;background:rgba(224,165,38,.16);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--gold)}
+#res .ic svg{width:46px;height:46px}
+#res p{color:#cfe0d5}
+.again{background:none;border:1.5px solid rgba(255,255,255,.4);color:#fff;border-radius:99px;padding:12px 22px;font:600 14px var(--sans);cursor:pointer;margin-top:8px}
+footer{padding:36px 22px 44px;text-align:center;color:var(--muted);font-size:14px}
+footer b{display:block;font:700 18px var(--serif);color:var(--ink);margin-bottom:4px}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media(min-width:760px){.two{grid-template-columns:1.1fr .9fr}.cards{grid-template-columns:repeat(3,1fr)}.cols{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr;gap:26px}.quiz{padding:48px}.opts{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="tree" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><path d="M32 6 16 30h8L12 46h40L40 30h8Z"/><path d="M32 46v12"/></symbol>
+<symbol id="factory" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><path d="M8 56V30l14 8V30l14 8V30l14 8V14h6v42Z"/><path d="M14 56v-8M26 56v-8M38 56v-8"/><path d="M50 8c0-3 4-3 4-6"/></symbol>
+<symbol id="drop" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><path d="M32 6C24 18 14 28 14 40a18 18 0 0 0 36 0C50 28 40 18 32 6Z"/><path d="M24 42a8 8 0 0 0 8 8"/></symbol>
+<symbol id="thermo" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><path d="M24 36V12a8 8 0 0 1 16 0v24a14 14 0 1 1-16 0Z"/><circle cx="32" cy="46" r="5" fill="currentColor"/><path d="M32 40V22"/></symbol>
+<symbol id="flame" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><path d="M34 4c2 12 16 18 16 34a18 18 0 0 1-36 0c0-8 4-12 8-16 0 6 3 8 6 8 0-10-2-14 6-26Z"/><path d="M26 50c0-5 6-7 6-12 4 3 6 6 6 10"/></symbol>
+<symbol id="bin" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><path d="M10 16h44M24 16V8h16v8M14 16l3 40h30l3-40"/><path d="M26 28l6-6 6 6M38 28v10M26 38l-4-4M30 46h8"/></symbol>
+<symbol id="globe" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><circle cx="32" cy="32" r="24"/><path d="M8 32h48M32 8c-12 14-12 34 0 48M32 8c12 14 12 34 0 48"/></symbol>
+<symbol id="chip" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><rect x="16" y="16" width="32" height="32" rx="5"/><rect x="25" y="25" width="14" height="14" rx="2"/><path d="M24 6v10M40 6v10M24 48v10M40 48v10M6 24h10M6 40h10M48 24h10M48 40h10"/></symbol>
+<symbol id="leaf" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><path d="M10 54C8 24 28 8 56 8c0 28-14 48-42 46"/><path d="M10 54 38 26"/></symbol>
+<g id="pine"><path d="M0 0 22 60H-22Z"/><path d="M0 -26 18 30H-18Z"/><path d="M0 -50 14 6H-14Z"/><rect x="-3" y="58" width="6" height="14"/></g>
+<g id="turb" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none"><path d="M0 0V-70"/><path d="M0 -70l0-34M0 -70l30 17M0 -70l-30 17"/><circle cx="0" cy="-70" r="4" fill="#e0a526" stroke="none"/></g>
+</defs></svg>
+
+<div class="bar"><b>O futuro não está pronto</b><a onclick="go('quiz')">Fazer o quiz</a></div>
+
+<header class="hero">
+<div class="glow"></div>
+<div class="w">
+  <p class="eyebrow">Tecnologia e meio ambiente</p>
+  <h1>O futuro<br>não está <em>pronto</em></h1>
+  <p>A tecnologia evoluiu porque a humanidade ousou imaginar aquilo que ainda não existia. Agora, o próximo desafio é imaginar um futuro em que inovação e preservação caminhem juntas.</p>
+  <a class="btn" onclick="go('quiz')">Ir direto para o quiz</a>
+</div>
+<svg class="scene" viewBox="0 0 1000 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <g stroke="#4fa97a" stroke-width="1.2" fill="none" opacity=".75"><path d="M560 60 650 110 720 40 800 100 880 50M650 110 760 160 800 100M560 60 720 40"/></g>
+  <g fill="#7fd4a0"><circle cx="560" cy="60" r="5"/><circle cx="650" cy="110" r="5"/><circle cx="720" cy="40" r="5"/><circle cx="800" cy="100" r="5"/><circle cx="880" cy="50" r="5"/><circle cx="760" cy="160" r="5"/></g>
+  <circle cx="800" cy="105" r="62" fill="#245e8f"/><g fill="#3fa35f"><circle cx="780" cy="90" r="22"/><circle cx="765" cy="112" r="13"/><circle cx="822" cy="118" r="24"/><circle cx="840" cy="86" r="10"/></g>
+  <circle cx="800" cy="105" r="70" fill="none" stroke="#e0a526" stroke-width="2.5"/>
+  <path d="M0 300V190C160 160 300 215 470 195S800 165 1000 185V300Z" fill="#1d5640"/>
+  <use href="#turb" x="300" y="215"/><use href="#turb" x="420" y="205" transform="translate(0,0) scale(1)" opacity=".85"/>
+  <g fill="#2a7a53"><use href="#pine" transform="translate(620 195) scale(.8)"/><use href="#pine" transform="translate(680 190) scale(1)"/><use href="#pine" transform="translate(745 198) scale(.75)"/><use href="#pine" transform="translate(900 190) scale(1.05)"/><use href="#pine" transform="translate(960 196) scale(.8)"/></g>
+  <path d="M0 300V250C180 270 360 225 540 250S860 230 1000 245V300Z" fill="#2e7d4f"/>
+  <g fill="#3e9b66"><use href="#pine" transform="translate(60 225) scale(.8)"/><use href="#pine" transform="translate(130 232) scale(.6)"/><use href="#pine" transform="translate(560 238) scale(.7)"/><use href="#pine" transform="translate(830 232) scale(.85)"/></g>
+</svg>
+</header>
+
+<section><div class="w two">
+  <div class="rv">
+    <p class="num">01 · Ponto de partida</p>
+    <h2>Imaginar para criar</h2>
+    <p>Do fogo à internet, toda grande invenção começou como uma ideia. Hoje, a Inteligência Artificial pode analisar dados, identificar padrões e ajudar a prever riscos, algo muito útil quando o assunto é cuidar do meio ambiente.</p>
+    <p>Mas a tecnologia é uma ferramenta. Quem decide para onde apontá-la somos nós.</p>
+  </div>
+  <div class="planet rv"><svg viewBox="0 0 320 300" aria-hidden="true">
+    <g stroke="#4fa97a" stroke-width="1.4" fill="none"><path d="M30 60 90 30 150 70 230 25 290 70M90 30 40 140 90 230 160 260 250 230 295 160M150 70 160 150M230 25 250 100M40 140 90 230"/></g>
+    <g fill="#7fd4a0"><circle cx="30" cy="60" r="5"/><circle cx="90" cy="30" r="5"/><circle cx="150" cy="70" r="5"/><circle cx="230" cy="25" r="5"/><circle cx="290" cy="70" r="5"/><circle cx="40" cy="140" r="5"/><circle cx="90" cy="230" r="5"/><circle cx="160" cy="260" r="5"/><circle cx="250" cy="230" r="5"/><circle cx="295" cy="160" r="5"/></g>
+    <circle cx="160" cy="150" r="82" fill="#245e8f"/><g fill="#3fa35f"><circle cx="135" cy="125" r="28"/><circle cx="118" cy="158" r="16"/><circle cx="188" cy="168" r="32"/><circle cx="205" cy="120" r="13"/></g>
+    <circle cx="160" cy="150" r="92" fill="none" stroke="#e0a526" stroke-width="2.5"/></svg></div>
+</div></section>
+
+<section class="alt"><div class="w">
+  <p class="num rv">02 · Na prática</p>
+  <h2 class="rv">Como a IA pode ajudar</h2>
+  <p class="rv" style="max-width:620px">Estes são alguns dos grandes problemas ambientais e o tipo de apoio que a tecnologia pode oferecer.</p>
+  <div class="cards">
+    <article class="card rv"><div class="tile"><span>01</span><svg><use href="#tree"/></svg></div><div class="t"><h3>Desmatamento</h3><p>Analisa imagens de satélite para notar mudanças na floresta e apoiar a fiscalização.</p></div></article>
+    <article class="card rv"><div class="tile"><span>02</span><svg><use href="#factory"/></svg></div><div class="t"><h3>Poluição</h3><p>Cruza dados de sensores para monitorar a qualidade do ar e da água e prever piora.</p></div></article>
+    <article class="card rv"><div class="tile"><span>03</span><svg><use href="#drop"/></svg></div><div class="t"><h3>Falta de água</h3><p>Ajuda a prever períodos de seca, achar vazamentos e planejar uma irrigação mais eficiente.</p></div></article>
+    <article class="card rv"><div class="tile"><span>04</span><svg><use href="#thermo"/></svg></div><div class="t"><h3>Mudanças climáticas</h3><p>Melhora modelos do clima, ajuda a usar energia com mais eficiência e a antecipar eventos extremos.</p></div></article>
+    <article class="card rv"><div class="tile"><span>05</span><svg><use href="#flame"/></svg></div><div class="t"><h3>Queimadas</h3><p>Identifica focos de calor e mostra as áreas de maior risco para agilizar o combate ao fogo.</p></div></article>
+    <article class="card rv"><div class="tile"><span>06</span><svg><use href="#bin"/></svg></div><div class="t"><h3>Lixo</h3><p>Auxilia a separar materiais recicláveis e a otimizar rotas de coleta.</p></div></article>
+  </div>
+</div></section>
+
+<div class="band">
+  <div class="w"><blockquote class="rv">Existe algo que nenhuma máquina pode fazer sozinha: <em>escolher o futuro que queremos.</em></blockquote></div>
+  <svg class="pines" viewBox="0 0 1000 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><g fill="#16412f"><use href="#pine" transform="translate(40 60) scale(.9)"/><use href="#pine" transform="translate(120 70) scale(.7)"/><use href="#pine" transform="translate(210 55) scale(1)"/><use href="#pine" transform="translate(300 72) scale(.75)"/><use href="#pine" transform="translate(400 60) scale(.9)"/><use href="#pine" transform="translate(500 70) scale(.7)"/><use href="#pine" transform="translate(590 52) scale(1.05)"/><use href="#pine" transform="translate(690 70) scale(.75)"/><use href="#pine" transform="translate(780 58) scale(.95)"/><use href="#pine" transform="translate(880 72) scale(.7)"/><use href="#pine" transform="translate(960 56) scale(.9)"/></g><rect y="105" width="1000" height="15" fill="#16412f"/></svg>
+</div>
+
+<section><div class="w">
+  <p class="num rv">03 · Os dois lados</p>
+  <h2 class="rv">A IA não resolve tudo sozinha</h2>
+  <p class="rv" style="max-width:640px">Ela depende de dados confiáveis e de pessoas que saibam interpretá-los. Inovar com responsabilidade faz parte da solução.</p>
+  <div class="cols">
+    <div class="panel rv"><h3><svg><use href="#chip"/></svg>O que a IA oferece</h3><ul><li>Análise rápida de grandes volumes de dados</li><li>Identificação de padrões difíceis de perceber</li><li>Previsão de riscos para agir com antecedência</li></ul></div>
+    <div class="panel warn rv"><h3><svg><use href="#leaf"/></svg>O que exige cuidado</h3><ul><li>Dados incompletos geram conclusões erradas</li><li>Os computadores que sustentam a IA consomem energia</li><li>A decisão final continua sendo das pessoas</li></ul></div>
+  </div>
+</div></section>
+
+<section class="alt"><div class="w">
+  <p class="num rv">04 · E você?</p>
+  <h2 class="rv">Atitudes que já fazem diferença</h2>
+  <div class="steps">
+    <div class="step rv"><i>1</i><div><b>Separe e reaproveite</b><span>Separar o lixo reciclável e reaproveitar o que for possível.</span></div></div>
+    <div class="step rv"><i>2</i><div><b>Economize recursos</b><span>Economizar água e energia no dia a dia.</span></div></div>
+    <div class="step rv"><i>3</i><div><b>Converse sobre o tema</b><span>Pesquisar, perguntar e debater com amigos e família.</span></div></div>
+    <div class="step rv"><i>4</i><div><b>Apoie boas ideias</b><span>Valorizar projetos que unam tecnologia e preservação.</span></div></div>
+  </div>
+</div></section>
+
+<section id="quiz"><div class="w"><div class="quiz rv">
+  <div id="q1">
+    <p class="num">Quiz</p>
+    <h2>Se você pudesse programar a IA do futuro...</h2>
+    <p class="q">Qual problema ambiental ela deveria ajudar a resolver primeiro?</p>
+    <div class="opts" id="opts"></div>
+    <div class="other" id="other"><input id="oth" type="text" maxlength="60" placeholder="Qual problema você escolheria?"></div>
+    <button class="go" id="go">Ver resultado</button>
+  </div>
+  <div id="res">
+    <p class="num">Sua escolha</p>
+    <div class="ic"><svg id="ric"></svg></div>
+    <h2 id="rt"></h2>
+    <p id="rp"></p>
+    <p style="font:600 20px/1.35 var(--serif);color:#fff;margin-top:20px">O futuro não está pronto. Ele depende das escolhas que a gente faz hoje.</p>
+    <button class="again" id="again">Refazer o quiz</button>
+  </div>
+</div></div></section>
+
+<footer><b>O futuro não está pronto</b>Inovação e preservação, juntas.</footer>
+
+<script>
+document.documentElement.classList.add("js");
+function go(id){document.getElementById(id).scrollIntoView({behavior:"smooth"})}
+var D=[["Desmatamento","tree","A IA pode analisar imagens de satélite para detectar áreas desmatadas rapidamente e apoiar a fiscalização."],
+["Poluição","factory","A IA pode cruzar dados de sensores para mapear fontes de poluição do ar e da água e ajudar a prever picos."],
+["Falta de água","drop","A IA pode ajudar a prever secas, achar vazamentos nas redes e planejar o uso mais eficiente da água."],
+["Mudanças climáticas","thermo","A IA pode melhorar modelos climáticos, otimizar o uso de energia e ajudar a antecipar eventos extremos."],
+["Queimadas","flame","A IA pode identificar focos de calor e prever áreas de maior risco, acelerando o combate ao fogo."],
+["Lixo","bin","A IA pode ajudar a separar materiais recicláveis e a otimizar rotas de coleta e reaproveitamento."],
+["Outro...","globe","Todo problema ambiental pode se beneficiar de dados, padrões e previsões. Quanto mais gente imaginando soluções, melhor."]];
+var sel=-1,box=document.getElementById("opts");
+function ic(n){return '<svg><use href="#'+n+'"/></svg>'}
+D.forEach(function(d,i){var b=document.createElement("button");b.className="opt";b.innerHTML=ic(d[1])+"<span>"+d[0]+"</span>";
+ b.onclick=function(){sel=i;[].forEach.call(box.children,function(x){x.classList.remove("on")});b.classList.add("on");
+ document.getElementById("other").style.display=(i===6?"block":"none");document.getElementById("go").style.display="block"};box.appendChild(b)});
+document.getElementById("go").onclick=function(){var d=D[sel],t=d[0];
+ if(sel===6){var v=document.getElementById("oth").value.trim();t=v||"Outro"}
+ document.getElementById("rt").textContent=t;document.getElementById("rp").textContent=d[2];
+ document.getElementById("ric").innerHTML='<use href="#'+d[1]+'"/>';
+ document.getElementById("q1").style.display="none";document.getElementById("res").style.display="block";go("quiz")};
+document.getElementById("again").onclick=function(){document.getElementById("res").style.display="none";document.getElementById("q1").style.display="block";
+ document.getElementById("go").style.display="none";document.getElementById("other").style.display="none";
+ [].forEach.call(box.children,function(x){x.classList.remove("on")});sel=-1};
+try{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+ document.querySelectorAll(".rv").forEach(function(e){io.observe(e)})}catch(e){document.querySelectorAll(".rv").forEach(function(e){e.classList.add("in")})}
+</script>
+</body>
+</html>
